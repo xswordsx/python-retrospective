@@ -16,3 +16,9 @@ def zip_with(func, *iterables):
 def compose(func1, func2):
     return lambda x: func1(func2(x))
 
+
+def iterate(function):
+    result = lambda x: x
+    while True:
+        result
+        result = compose(function, result)
