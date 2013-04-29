@@ -12,3 +12,7 @@ def zip_with(func, *iterables):
     for iters in list(zip(*iterables)):
         yield func(*iters)
 
+
+def compose(func1, func2):
+    return lambda x: func1(func2(x))
+
